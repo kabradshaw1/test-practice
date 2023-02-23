@@ -6,6 +6,11 @@ import About from "..";
 describe('About component', () => {
   it('renders', () => {
     render(<About />);
+  });
+
+  it('matches snapshot DOM node scrtucture', () => {
+    const { asFragment } = render(<About />);
+    expect(asFragment()).toMatchSnapshot();
   })
 })
 
