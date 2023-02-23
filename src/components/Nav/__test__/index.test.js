@@ -10,5 +10,9 @@ describe('Nav component', () => {
     render(<Nav/>);
   });
 
-  
+  it('matches snapshot', () => {
+    const { asFragment } = render(<Nav/>);
+    expect(asFragment()).toMatchSnapshot();
+  })
+
 })
